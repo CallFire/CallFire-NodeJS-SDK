@@ -6,14 +6,14 @@
     };
     module.exports = CreateContactBatch;
     var proto = CreateContactBatch.prototype;
-    
-    proto.requestId = null;
 
-    proto.broadcastId = null;
+    proto.requestId = null;
 
     proto.name = null;
 
     proto.to = null;
+
+    proto.toNumber = null;
 
     proto.contactListId = null;
 

@@ -6,7 +6,7 @@
     };
     module.exports = QueryTexts;
     var proto = QueryTexts.prototype;
-    
+
     proto.maxResults = null;
 
     proto.firstResult = null;

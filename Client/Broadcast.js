@@ -26,11 +26,6 @@ var Client = require('../Client'),
         return this.get(uri, {}, callback);
     };
 
-    proto.UpdateBroadcast = function(Id, UpdateBroadcast, callback) {
-        var uri = this.get_uri('/broadcast/%s', Id);
-        return this.put(uri, UpdateBroadcast, callback);
-    };
-
     proto.GetBroadcastStats = function(Id, GetBroadcastStats, callback) {
         var uri = this.get_uri('/broadcast/%s/stats', Id);
         return this.get(uri, GetBroadcastStats, callback);
@@ -41,8 +36,13 @@ var Client = require('../Client'),
         return this.put(uri, ControlBroadcast, callback);
     };
 
-    proto.QueryContactBatches = function(Id, QueryContactBatches, callback) {
-        var uri = this.get_uri('/broadcast/%s/batch', Id);
+    proto.CreateContactBatch = function(BroadcastId, CreateContactBatch, callback) {
+        var uri = this.get_uri('/broadcast/%s/batch', BroadcastId);
+        return this.post(uri, CreateContactBatch, callback);
+    };
+
+    proto.QueryContactBatches = function(BroadcastId, QueryContactBatches, callback) {
+        var uri = this.get_uri('/broadcast/%s/batch', BroadcastId);
         return this.get(uri, QueryContactBatches, callback);
     };
 
@@ -56,13 +56,13 @@ var Client = require('../Client'),
         return this.put(uri, ControlContactBatch, callback);
     };
 
-    proto.CreateBroadcastSchedule = function(CreateBroadcastSchedule, callback) {
-        var uri = this.get_uri('/broadcast/schedule');
+    proto.CreateBroadcastSchedule = function(BroadcastId, CreateBroadcastSchedule, callback) {
+        var uri = this.get_uri('/broadcast/%s/schedule', BroadcastId);
         return this.post(uri, CreateBroadcastSchedule, callback);
     };
 
-    proto.QueryBroadcastSchedule = function(QueryBroadcastSchedule, callback) {
-        var uri = this.get_uri('/broadcast/schedule');
+    proto.QueryBroadcastSchedule = function(BroadcastId, QueryBroadcastSchedule, callback) {
+        var uri = this.get_uri('/broadcast/%s/schedule', BroadcastId);
         return this.get(uri, QueryBroadcastSchedule, callback);
     };
 
@@ -76,9 +76,9 @@ var Client = require('../Client'),
         return this.delete(uri, {}, callback);
     };
 
-    proto.CreateContactBatch = function(id, CreateContactBatch, callback) {
-        var uri = this.get_uri('/broadcast/%s/batch', id);
-        return this.post(uri, CreateContactBatch, callback);
+    proto.UpdateBroadcast = function(id, UpdateBroadcast, callback) {
+        var uri = this.get_uri('/broadcast/%s', id);
+        return this.put(uri, UpdateBroadcast, callback);
     };
 
 }) ();

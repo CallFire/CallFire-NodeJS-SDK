@@ -6,13 +6,13 @@
     };
     module.exports = CreateSound;
     var proto = CreateSound.prototype;
-    
-    proto.name = null;
 
-    proto.data = null;
+    proto.name = null;
 
     proto.toNumber = null;
 
     proto.soundText = null;
+
+    proto.soundTextVoice = null;
 
 }) ();

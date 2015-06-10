@@ -6,10 +6,8 @@
     };
     module.exports = CreateBroadcastSchedule;
     var proto = CreateBroadcastSchedule.prototype;
-    
-    proto.requestId = null;
 
-    proto.broadcastId = null;
+    proto.requestId = null;
 
     proto.startTimeOfDay = null;
 

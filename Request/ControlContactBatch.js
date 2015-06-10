@@ -6,8 +6,6 @@
     };
     module.exports = ControlContactBatch;
     var proto = ControlContactBatch.prototype;
-    
-    proto.id = null;
 
     proto.name = null;
 

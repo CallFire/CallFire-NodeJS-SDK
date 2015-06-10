@@ -6,7 +6,7 @@
     };
     module.exports = CreateAutoReply;
     var proto = CreateAutoReply.prototype;
-    
+
     proto.requestId = null;
 
     proto.number = null;

@@ -6,7 +6,7 @@
     };
     module.exports = SearchAvailableNumbers;
     var proto = SearchAvailableNumbers.prototype;
-    
+
     proto.prefix = null;
 
     proto.city = null;

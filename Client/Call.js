@@ -41,4 +41,19 @@ var Client = require('../Client'),
         return this.get(uri, {}, callback);
     };
 
+    proto.SendVerificationCodeToCallerId = function(SendVerificationCodeToCallerId, callback) {
+        var uri = this.get_uri('/call/callerid/send-verification');
+        return this.post(uri, SendVerificationCodeToCallerId, callback);
+    };
+
+    proto.VerifyCallerId = function(VerifyCallerId, callback) {
+        var uri = this.get_uri('/call/callerid/verify');
+        return this.post(uri, VerifyCallerId, callback);
+    };
+
+    proto.GetCallerIds = function(GetCallerIds, callback) {
+        var uri = this.get_uri('/call/callerid');
+        return this.get(uri, GetCallerIds, callback);
+    };
+
 }) ();

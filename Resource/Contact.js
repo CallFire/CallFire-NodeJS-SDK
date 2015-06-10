@@ -22,5 +22,7 @@ var Resource = require('../Resource');
     proto.homePhone = null;
     proto.workPhone = null;
     proto.mobilePhone = null;
+    proto.externalId = null;
+    proto.externalSystem = null;
     proto.attributes = [];
 }) ();

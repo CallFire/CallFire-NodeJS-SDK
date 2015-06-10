@@ -6,7 +6,7 @@
     };
     module.exports = GetBroadcastStats;
     var proto = GetBroadcastStats.prototype;
-    
+
     proto.intervalBegin = null;
 
     proto.intervalEnd = null;

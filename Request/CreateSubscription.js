@@ -6,7 +6,7 @@
     };
     module.exports = CreateSubscription;
     var proto = CreateSubscription.prototype;
-    
+
     proto.requestId = null;
 
     proto.enabled = null;

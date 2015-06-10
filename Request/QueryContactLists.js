@@ -6,7 +6,7 @@
     };
     module.exports = QueryContactLists;
     var proto = QueryContactLists.prototype;
-    
+
     proto.maxResults = null;
 
     proto.firstResult = null;

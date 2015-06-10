@@ -6,7 +6,7 @@
     };
     module.exports = SearchAvailableKeywords;
     var proto = SearchAvailableKeywords.prototype;
-    
+
     proto.keywords = null;
 
 }) ();

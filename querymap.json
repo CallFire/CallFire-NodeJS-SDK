@@ -1,17 +1,14 @@
 {
-    "TextToSpeech": {
-
-    },
     "InboundConfig": {
         "id": "@id"
     },
-    "RetryResults": {
-
-    },
+    "RetryResults": {},
+    "RetryPhoneTypes": {},
     "RetryConfig": {
         "MaxAttempts": "_:MaxAttempts",
         "MinutesBetweenAttempts": "_:MinutesBetweenAttempts",
-        "#RetryResults": "_:RetryResults"
+        "#RetryResults": "_:RetryResults",
+        "#RetryPhoneTypes": "_:RetryPhoneTypes"
     },
     "BroadcastConfig": {
         "id": "@id",
@@ -20,9 +17,7 @@
         "#LocalTimeZoneRestriction": "_:LocalTimeZoneRestriction",
         "#RetryConfig": "_:RetryConfig"
     },
-    "ToNumber": {
-
-    },
+    "ToNumber": {},
     "QuestionResponse": {
         "Question": "_:Question",
         "Response": "_:Response"
@@ -45,11 +40,10 @@
         "Inbound": "_:Inbound",
         "Created": "_:Created",
         "Modified": "_:Modified",
-        "FinalResult": "_:FinalResult"
+        "FinalResult": "_:FinalResult",
+        "#@Labels": "_:Label"
     },
-    "Fulfilled": {
-
-    },
+    "Fulfilled": {},
     "NumberOrderItem": {
         "Ordered": "_:Ordered",
         "UnitCost": "_:UnitCost",
@@ -63,12 +57,17 @@
         "Type": "_:Type",
         "#VoiceBroadcastConfig": "VoiceBroadcastConfig",
         "#TextBroadcastConfig": "TextBroadcastConfig",
-        "#IvrBroadcastConfig": "IvrBroadcastConfig"
+        "#IvrBroadcastConfig": "IvrBroadcastConfig",
+        "#CccBroadcastConfig": "CccBroadcastConfig"
     },
     "VoiceBroadcastConfig": {
         "AnsweringMachineConfig": "_:AnsweringMachineConfig",
+        "LiveSoundTextVoice": "_:LiveSoundTextVoice",
+        "MachineSoundTextVoice": "_:MachineSoundTextVoice",
+        "TransferSoundTextVoice": "_:TransferSoundTextVoice",
         "TransferDigit": "_:TransferDigit",
         "TransferNumber": "_:TransferNumber",
+        "DncSoundTextVoice": "_:DncSoundTextVoice",
         "DncDigit": "_:DncDigit",
         "MaxActiveTransfers": "_:MaxActiveTransfers",
         "LiveSoundText": "_:LiveSoundText",
@@ -80,6 +79,14 @@
         "DncSoundText": "_:DncSoundText",
         "DncSoundId": "_:DncSoundId"
     },
+    "CccBroadcastConfig": {
+        "AgentGroupId": "_:AgentGroupId",
+        "SmartDropSoundId": "_:SmartDropSoundId",
+        "ScriptId": "_:ScriptId",
+        "TransferNumberIdList": "_:TransferNumberIdList",
+        "AllowAnyTransfer": "_:AllowAnyTransfer",
+        "Recorded": "_:Recorded"
+    },
     "TextBroadcastConfig": {
         "Message": "_:Message",
         "BigMessageStrategy": "_:BigMessageStrategy"
@@ -87,9 +94,7 @@
     "IvrBroadcastConfig": {
         "DialplanXml": "_:DialplanXml"
     },
-    "TransferNumber": {
-
-    },
+    "TransferNumber": {},
     "CallTrackingConfig": {
         "Screen": "_:Screen",
         "Record": "_:Record",
@@ -113,9 +118,7 @@
         "Size": "_:Size",
         "Remaining": "_:Remaining"
     },
-    "DaysOfWeek": {
-
-    },
+    "DaysOfWeek": {},
     "BroadcastSchedule": {
         "id": "@id",
         "StartTimeOfDay": "_:StartTimeOfDay",
@@ -167,7 +170,8 @@
         "id": "@id",
         "Name": "_:Name",
         "Created": "_:Created",
-        "LengthInSeconds": "_:LengthInSeconds"
+        "LengthInSeconds": "_:LengthInSeconds",
+        "Link": "_:Link"
     },
     "TextRecord": {
         "Message": "_:Message"
@@ -205,16 +209,17 @@
         "zipcode": "@zipcode",
         "homePhone": "@homePhone",
         "workPhone": "@workPhone",
-        "mobilePhone": "@mobilePhone"
+        "mobilePhone": "@mobilePhone",
+        "externalId": "@externalId",
+        "externalSystem": "@externalSystem"
     },
-    "ContactHistory": {
-
-    },
+    "ContactHistory": {},
     "ContactList": {
         "id": "@id",
         "Name": "_:Name",
         "Size": "_:Size",
-        "Created": "_:Created"
+        "Created": "_:Created",
+        "Status": "_:Status"
     },
     "Region": {
         "Prefix": "_:Prefix",
@@ -233,15 +238,28 @@
         "LeaseEnd": "_:LeaseEnd",
         "AutoRenew": "_:AutoRenew"
     },
+    "DncList": {
+        "id": "@id",
+        "CampaignId": "_:CampaignId",
+        "Name": "_:Name",
+        "Size": "_:Size"
+    },
+    "DncNumber": {
+        "Number": "_:Number",
+        "DncListId": "_:DncListId",
+        "CallDnc": "_:CallDnc",
+        "TextDnc": "_:TextDnc"
+    },
     "Number": {
         "Number": "_:Number",
         "NationalFormat": "_:NationalFormat",
         "TollFree": "_:TollFree",
-        "Status": "_:Status"
+        "Status": "_:Status",
+        "#Region": "_:Region",
+        "#LeaseInfo": "_:LeaseInfo",
+        "#NumberConfiguration": "_:NumberConfiguration"
     },
-    "InboundCallConfiguration": {
-
-    },
+    "InboundCallConfiguration": {},
     "NumberConfiguration": {
         "CallFeature": "_:CallFeature",
         "TextFeature": "_:TextFeature",
@@ -251,7 +269,8 @@
     "Keyword": {
         "ShortCode": "_:ShortCode",
         "Keyword": "_:Keyword",
-        "Status": "_:Status"
+        "Status": "_:Status",
+        "#LeaseInfo": "_:LeaseInfo"
     },
     "NumberOrder": {
         "id": "@id",
@@ -264,5 +283,78 @@
     },
     "Label": {
         "Name": "_:Name"
+    },
+    "Question": {
+        "Label": "_:Label",
+        "ResponseType": "_:ResponseType",
+        "Choices": "_:Choices"
+    },
+    "CccCampaign": {
+        "id": "@id",
+        "Name": "_:Name",
+        "Status": "_:Status",
+        "Created": "_:Created",
+        "LastModified": "_:LastModified",
+        "LocalRestrictBegin": "_:LocalRestrictBegin",
+        "LocalRestrictEnd": "_:LocalRestrictEnd",
+        "ConfigUpdated": "_:ConfigUpdated",
+        "Script": "_:Script",
+        "FromNumber": "_:FromNumber",
+        "RetryConfig": "_:RetryConfig",
+        "AgentGroupId": "_:AgentGroupId",
+        "AgentGroupName": "_:AgentGroupName",
+        "SmartDropSoundId": "_:SmartDropSoundId",
+        "SmartDropSoundRef": "_:SmartDropSoundRef",
+        "AllowAnyTransfer": "_:AllowAnyTransfer",
+        "Recorded": "_:Recorded",
+        "ScrubLevel": "_:ScrubLevel",
+        "#@Questions": "_:Question",
+        "#@TransferNumbers": "_:TransferNumber"
+    },
+    "CccCampaignStats": {
+        "AgentCount": "_:AgentCount",
+        "ActiveAgentCount": "_:ActiveAgentCount",
+        "CallsAttempted": "_:CallsAttempted",
+        "CallsPlaced": "_:CallsPlaced",
+        "CallsDuration": "_:CallsDuration",
+        "BilledDuration": "_:BilledDuration",
+        "BilledAmount": "_:BilledAmount",
+        "CallsRemaining": "_:CallsRemaining",
+        "CallsAwaitingRedial": "_:CallsAwaitingRedial",
+        "CallsLiveAnswer": "_:CallsLiveAnswer",
+        "ResponseRatePercent": "_:ResponseRatePercent",
+        "#@ResultStats": "_:ResultStat"
+    },
+    "Callback": {
+        "id": "@id",
+        "UserId": "_:UserId",
+        "OutboundCallId": "_:OutboundCallId",
+        "NotificationSent": "_:NotificationSent"
+    },
+    "Agent": {
+        "id": "@id",
+        "Enabled": "_:Enabled",
+        "Name": "_:Name",
+        "Email": "_:Email",
+        "LastLogin": "_:LastLogin",
+        "CampaignIds": "_:CampaignIds",
+        "GroupIds": "_:GroupIds",
+        "ActiveSessionId": "_:ActiveSessionId"
+    },
+    "AgentGroup": {
+        "id": "@id",
+        "Name": "_:Name",
+        "CampaignIds": "_:CampaignIds",
+        "AgentIds": "_:AgentIds",
+        "AgentEmails": "_:AgentEmails"
+    },
+    "AgentSession": {
+        "id": "@id",
+        "AgentId": "_:AgentId",
+        "CampaignId": "_:CampaignId",
+        "AgentState": "_:AgentState",
+        "CallCount": "_:CallCount",
+        "Start": "_:Start",
+        "LastUpdate": "_:LastUpdate"
     }
 }

@@ -6,7 +6,7 @@
     };
     module.exports = QueryKeywords;
     var proto = QueryKeywords.prototype;
-    
+
     proto.maxResults = null;
 
     proto.firstResult = null;

@@ -6,7 +6,7 @@
     };
     module.exports = QueryAutoReplies;
     var proto = QueryAutoReplies.prototype;
-    
+
     proto.maxResults = null;
 
     proto.firstResult = null;

@@ -26,4 +26,5 @@ var Resource = require('../Resource');
     proto.created = null;
     proto.modified = null;
     proto.finalResult = null;
+    proto.labels = [];
 }) ();

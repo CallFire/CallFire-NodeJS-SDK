@@ -6,14 +6,14 @@
     };
     module.exports = ConfigureNumber;
     var proto = ConfigureNumber.prototype;
-    
-    proto.number = null;
 
     proto.callFeature = null;
 
     proto.textFeature = null;
 
     proto.inboundCallConfigurationType = null;
+
+    proto.callTrackingConfig = null;
 
     proto.transferNumber = null;
 
@@ -25,6 +25,6 @@
 
     proto.whisperSoundId = null;
 
-    proto.dialplanXml = null;
+    proto.ivrInboundConfig = null;
 
 }) ();

@@ -6,7 +6,7 @@
     };
     module.exports = UpdateSubscription;
     var proto = UpdateSubscription.prototype;
-    
+
     proto.requestId = null;
 
     proto.enabled = null;
@@ -26,5 +26,7 @@
     proto.toNumber = null;
 
     proto.inbound = null;
+
+    proto.subscription = null;
 
 }) ();

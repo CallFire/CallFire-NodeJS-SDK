@@ -19,4 +19,5 @@ var Resource = require('../Resource');
     proto.name = null;
     proto.size = null;
     proto.created = null;
+    proto.status = null;
 }) ();

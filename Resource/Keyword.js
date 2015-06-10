@@ -18,4 +18,5 @@ var Resource = require('../Resource');
     proto.shortCode = null;
     proto.keyword = null;
     proto.status = null;
+    proto.leaseInfo = null;
 }) ();

@@ -26,14 +26,14 @@ var Client = require('../Client'),
         return this.get(uri, {}, callback);
     };
 
-    proto.UpdateSubscription = function(Id, UpdateSubscription, callback) {
-        var uri = this.get_uri('/subscription/%s', Id);
-        return this.put(uri, UpdateSubscription, callback);
-    };
-
     proto.DeleteSubscription = function(Id, callback) {
         var uri = this.get_uri('/subscription/%s', Id);
         return this.delete(uri, {}, callback);
+    };
+
+    proto.UpdateSubscription = function(Id, UpdateSubscription, callback) {
+        var uri = this.get_uri('/subscription/%s', Id);
+        return this.put(uri, UpdateSubscription, callback);
     };
 
 }) ();

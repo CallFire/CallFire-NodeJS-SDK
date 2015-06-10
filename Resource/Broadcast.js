@@ -23,4 +23,5 @@ var Resource = require('../Resource');
     proto.voiceBroadcastConfig = null;
     proto.textBroadcastConfig = null;
     proto.ivrBroadcastConfig = null;
+    proto.cccBroadcastConfig = null;
 }) ();

@@ -6,8 +6,6 @@
     };
     module.exports = LabelNumber;
     var proto = LabelNumber.prototype;
-    
-    proto.number = null;
 
     proto.labelName = null;
 

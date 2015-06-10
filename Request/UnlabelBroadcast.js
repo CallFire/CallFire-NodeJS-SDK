@@ -6,7 +6,7 @@
     };
     module.exports = UnlabelBroadcast;
     var proto = UnlabelBroadcast.prototype;
-    
+
     proto.labelName = null;
 
 }) ();

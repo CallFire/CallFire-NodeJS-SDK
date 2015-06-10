@@ -6,7 +6,7 @@
     };
     module.exports = QueryLabels;
     var proto = QueryLabels.prototype;
-    
+
     proto.maxResults = null;
 
     proto.firstResult = null;

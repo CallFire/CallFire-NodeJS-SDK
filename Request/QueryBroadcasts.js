@@ -6,7 +6,7 @@
     };
     module.exports = QueryBroadcasts;
     var proto = QueryBroadcasts.prototype;
-    
+
     proto.maxResults = null;
 
     proto.firstResult = null;

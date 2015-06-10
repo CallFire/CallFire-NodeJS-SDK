@@ -6,13 +6,17 @@
     };
     module.exports = CreateContactList;
     var proto = CreateContactList.prototype;
-    
+
     proto.requestId = null;
 
     proto.name = null;
 
+    proto.validate = null;
+
+    proto.contact = null;
+
     proto.contactId = null;
 
-    proto.file = null;
+    proto.numbers = null;
 
 }) ();

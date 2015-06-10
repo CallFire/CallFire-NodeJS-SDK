@@ -6,7 +6,7 @@
     };
     module.exports = QueryRegions;
     var proto = QueryRegions.prototype;
-    
+
     proto.maxResults = null;
 
     proto.firstResult = null;

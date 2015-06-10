@@ -6,7 +6,7 @@
     };
     module.exports = GetNumber;
     var proto = GetNumber.prototype;
-    
+
     proto.number = null;
 
 }) ();

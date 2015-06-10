@@ -19,4 +19,7 @@ var Resource = require('../Resource');
     proto.nationalFormat = null;
     proto.tollFree = null;
     proto.status = null;
+    proto.region = null;
+    proto.leaseInfo = null;
+    proto.numberConfiguration = null;
 }) ();

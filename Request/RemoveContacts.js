@@ -6,7 +6,7 @@
     };
     module.exports = RemoveContacts;
     var proto = RemoveContacts.prototype;
-    
+
     proto.contactId = null;
 
 }) ();

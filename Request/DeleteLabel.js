@@ -6,7 +6,7 @@
     };
     module.exports = DeleteLabel;
     var proto = DeleteLabel.prototype;
-    
+
     proto.labelName = null;
 
 }) ();

@@ -6,8 +6,6 @@
     };
     module.exports = ControlBroadcast;
     var proto = ControlBroadcast.prototype;
-    
-    proto.id = null;
 
     proto.requestId = null;
 

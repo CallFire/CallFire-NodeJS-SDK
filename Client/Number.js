@@ -21,9 +21,9 @@ var Client = require('../Client'),
         return this.get(uri, QueryNumbers, callback);
     };
 
-    proto.GetNumber = function(Number, GetNumber, callback) {
+    proto.GetNumber = function(Number, callback) {
         var uri = this.get_uri('/number/%s', Number);
-        return this.get(uri, GetNumber, callback);
+        return this.get(uri, {}, callback);
     };
 
     proto.ConfigureNumber = function(Number, ConfigureNumber, callback) {
@@ -56,8 +56,8 @@ var Client = require('../Client'),
         return this.get(uri, {}, callback);
     };
 
-    proto.Release = function(Id, Release, callback) {
-        var uri = this.get_uri('/number/release', Id);
+    proto.Release = function(Release, callback) {
+        var uri = this.get_uri('/number/release');
         return this.put(uri, Release, callback);
     };
 

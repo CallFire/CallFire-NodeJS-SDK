@@ -6,7 +6,7 @@
     };
     module.exports = SendText;
     var proto = SendText.prototype;
-    
+
     proto.requestId = null;
 
     proto.type = null;
@@ -15,7 +15,11 @@
 
     proto.to = null;
 
+    proto.toNumber = null;
+
     proto.scrubBroadcastDuplicates = null;
+
+    proto.created = null;
 
     proto.from = null;
 
@@ -29,8 +33,14 @@
 
     proto.retryResults = null;
 
+    proto.retryPhoneTypes = null;
+
     proto.message = null;
 
     proto.bigMessageStrategy = null;
+
+    proto.broadcastId = null;
+
+    proto.useDefaultBroadcast = null;
 
 }) ();

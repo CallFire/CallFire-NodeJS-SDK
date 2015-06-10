@@ -6,7 +6,7 @@
     };
     module.exports = CreateNumberOrder;
     var proto = CreateNumberOrder.prototype;
-    
+
     proto.numbers = null;
 
     proto.keywords = null;

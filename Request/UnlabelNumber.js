@@ -6,8 +6,6 @@
     };
     module.exports = UnlabelNumber;
     var proto = UnlabelNumber.prototype;
-    
-    proto.number = null;
 
     proto.labelName = null;
 

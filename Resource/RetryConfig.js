@@ -18,4 +18,5 @@ var Resource = require('../Resource');
     proto.maxAttempts = null;
     proto.minutesBetweenAttempts = null;
     proto.retryResults = null;
+    proto.retryPhoneTypes = null;
 }) ();

@@ -6,11 +6,13 @@
     };
     module.exports = AddContactsToList;
     var proto = AddContactsToList.prototype;
-    
-    proto.contactListId = null;
+
+    proto.validate = null;
+
+    proto.contact = null;
 
     proto.contactId = null;
 
-    proto.file = null;
+    proto.numbers = null;
 
 }) ();
