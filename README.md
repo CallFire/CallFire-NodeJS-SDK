@@ -7,6 +7,7 @@ in production applications, please lock yourself to a specific patch version,
 as breaking changes may occur in such version as improvements are made.
 
 * [Getting Started](/docs/en/00.getting.started.md)
+* [Texts](/docs/en/03.texts.md)
 
 Installation
 ------------

@@ -74,7 +74,6 @@ var http = require('http'),
     
     proto.post = function(uri, parameters, callback) {
         var request;
-        var request_data = '';
         var response_data = '';
         var options;
         var handler;
@@ -105,11 +104,7 @@ var http = require('http'),
         
             
         if(parameters !== undefined && Object.keys(parameters).length > 0) {
-            request_data = querystring.stringify(parameters, { arrayFormat: 'indices' });
-            
-            console.log(request_data);
-            
-            request.write(request_data);
+            request.write(querystring.stringify(parameters, { arrayFormat: 'indices' }));
         }
         
         request.end();
