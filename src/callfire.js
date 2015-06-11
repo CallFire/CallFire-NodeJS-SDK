@@ -133,7 +133,7 @@ var libxmljs = require('libxmljs');
         return subscription_object;
     };
     
-    proto.queryMap = require('./querymap.json');
+    proto.queryMap = require('../querymap.json');
     
     proto.namespaces = {
         _: 'http://api.callfire.com/data',
