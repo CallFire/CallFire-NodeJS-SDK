@@ -6,7 +6,9 @@ maintained in parallel to the PHP SDK, it is not yet stable. When using this
 in production applications, please lock yourself to a specific patch version,
 as breaking changes may occur in such version as improvements are made.
 
+* [Getting Started](/docs/en/00.getting.started.md)
+
 Installation
 ------------
 
-`npm install`
+`npm install callfire`
