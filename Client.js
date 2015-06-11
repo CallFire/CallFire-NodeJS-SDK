@@ -1,6 +1,6 @@
 var http = require('http'),
     https = require('https'),
-    querystring = require('querystring'),
+    querystring = require('qs'),
     url = require('url'),
     util = require('util'),
     callfire = require('./callfire'),
@@ -40,7 +40,7 @@ var http = require('http'),
         var handler;
         
         if(parameters !== undefined && Object.keys(parameters).length > 0) {
-            uri = uri + '?' + querystring.stringify(parameters);
+            uri = uri + '?' + querystring.stringify(parameters, { arrayFormat: 'indices' });
         }
         
         options = url.parse(uri);
@@ -104,7 +104,7 @@ var http = require('http'),
         
             
         if(parameters !== undefined && Object.keys(parameters).length > 0) {
-            request.write(querystring.stringify(parameters));
+            request.write(querystring.stringify(parameters, { arrayFormat: 'indices' }));
         }
         
         request.end();
@@ -144,7 +144,7 @@ var http = require('http'),
         
             
         if(parameters !== undefined && Object.keys(parameters).length > 0) {
-            request.write(querystring.stringify(parameters));
+            request.write(querystring.stringify(parameters, { arrayFormat: 'indices' }));
         }
         
         request.end();
@@ -184,7 +184,7 @@ var http = require('http'),
         
             
         if(parameters !== undefined && Object.keys(parameters).length > 0) {
-            request.write(querystring.stringify(parameters));
+            request.write(querystring.stringify(parameters, { arrayFormat: 'indices' }));
         }
         
         request.end();
