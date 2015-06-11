@@ -6,9 +6,9 @@ var Response = require('../Response'),
     'use strict';
     
     var ResourceList = function(document) {
-        Response.call(this, document);
-        
         this.resources = [];
+        
+        Response.call(this, document);
     };
     module.exports = ResourceList;
     var proto = ResourceList.prototype;
@@ -30,9 +30,11 @@ var Response = require('../Response'),
             for(var i in resource_list) {
                 var resource = callfire.parse_resource_node(resource_list[i]);
                 
-                if(resource !== undefined) {
-                    this.resources.push(resource);
+                if(resource == undefined) {
+                    throw new Error('Unable to parse resource node');
                 }
+                
+                this.resources.push(resource);
             }
         }
     };
